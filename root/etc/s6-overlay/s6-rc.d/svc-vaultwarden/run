@@ -4,11 +4,6 @@
 declare admin_token
 declare secret_key
 
-# Set defaults
-export DATA_FOLDER=/app/vw/data
-export ROCKET_PORT=80
-export ROCKET_WORKERS=2
-
 # Set a random secret, to remove confusing warning from logs.
 secret_key=$(openssl rand -base64 32)
 export ROCKET_SECRET_KEY="${secret_key}"
