@@ -14,8 +14,10 @@ LABEL maintainer="chukysoria"
 
 ENV ROCKET_PROFILE="release" \
     ROCKET_ADDRESS=0.0.0.0 \
-    ROCKET_PORT=80 \
-    SSL_CERT_DIR=/etc/ssl/certs
+    ROCKET_PORT=7979 \
+    ROCKET_WORKERS=2 \
+    SSL_CERT_DIR=/etc/ssl/certs \
+    DATA_FOLDER=/app/vw/data 
 
 # Create data folder and Install needed libraries
 RUN mkdir /app/vw && \
@@ -32,5 +34,5 @@ COPY --from=source /vaultwarden /app/vw/vaultwarden
 COPY root/ /
 
 VOLUME /app/vw/data
-EXPOSE 80
+EXPOSE 7979
 EXPOSE 3012
