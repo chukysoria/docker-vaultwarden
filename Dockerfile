@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-ARG BUILD_FROM=ghcr.io/chukysoria/baseimage-alpine:v0.3.5
+ARG BUILD_FROM=ghcr.io/chukysoria/baseimage-alpine:v0.4.0
 ARG BUILD_EXT_RELEASE="1.30.1-alpine"
 
 FROM ghcr.io/dani-garcia/vaultwarden:${BUILD_EXT_RELEASE} as source
@@ -23,7 +23,7 @@ ENV ROCKET_PROFILE="release" \
 RUN mkdir /app/vw && \
     mkdir /app/vw/data && \
     apk --no-cache add \
-        openssl=3.1.4-r1
+        openssl=3.1.4-r2
 
 # Copies the files from the context (Rocket.toml file and web-vault)
 # and the binary from the "build" stage to the current stage
