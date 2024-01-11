@@ -5,5 +5,16 @@
     "local>chukysoria/renovate-config:docker-build",
     "local>chukysoria/renovate-config:os-package(alpine_3_19)",
     "local>chukysoria/renovate-config:ext-release(docker,ghcr.io/dani-garcia/vaultwarden)"
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackagePrefixes": [
+        "ghcr.io/dani-garcia/vaultwarden"
+      ],
+      "versioning": "docker"
+    }
   ]
 }
