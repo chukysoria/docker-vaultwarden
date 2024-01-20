@@ -36,3 +36,5 @@ COPY root/ /
 VOLUME /app/vw/data
 EXPOSE 7979
 EXPOSE 3012
+
+HEALTHCHECK --interval=30s --timeout=30s --start-period=2m --start-interval=5s --retries=5 CMD ["/etc/s6-overlay/s6-rc.d/svc-vaultwarden/data/check"]
