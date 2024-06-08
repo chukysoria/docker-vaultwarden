@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-ARG BUILD_FROM=ghcr.io/chukysoria/baseimage-alpine:v0.6.0-3.20
+ARG BUILD_FROM=ghcr.io/chukysoria/baseimage-alpine:v0.6.1-3.20
 ARG BUILD_EXT_RELEASE="1.30.5-alpine"
 
 FROM ghcr.io/dani-garcia/vaultwarden:${BUILD_EXT_RELEASE} as source
