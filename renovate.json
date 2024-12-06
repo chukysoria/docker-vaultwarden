@@ -11,10 +11,10 @@
       "matchDatasources": [
         "docker"
       ],
-      "matchPackagePrefixes": [
-        "ghcr.io/dani-garcia/vaultwarden"
-      ],
-      "versioning": "docker"
+      "versioning": "docker",
+      "matchPackageNames": [
+        "ghcr.io/dani-garcia/vaultwarden{/,}**"
+      ]
     }
   ]
 }
