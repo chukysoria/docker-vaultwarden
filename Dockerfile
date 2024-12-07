@@ -2,8 +2,8 @@
 
 ARG BUILD_FROM=ghcr.io/chukysoria/baseimage-alpine:v0.6.25-3.20@sha256:058af9b1f3e48f0f88e37ae6f0b155afe75388add18cb11af652df316954dbfa
 ARG BUILD_EXT_RELEASE="1.32.5-alpine@sha256:76d46d32ba4120b022e0a69487f9fd79fc52e2765b1650c5c51a5dd912a3c288"
-FROM ghcr.io/dani-garcia/vaultwarden:${BUILD_EXT_RELEASE} as source
-FROM ${BUILD_FROM} as release
+FROM ghcr.io/dani-garcia/vaultwarden:${BUILD_EXT_RELEASE} AS source
+FROM ${BUILD_FROM} AS release
 
 # set version label
 ARG BUILD_DATE
