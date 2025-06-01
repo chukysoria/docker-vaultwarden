@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1@sha256:9857836c9ee4268391bb5b09f9f157f3c91bb15821bb77969642813b0d00518d
 
-ARG BUILD_FROM=ghcr.io/chukysoria/baseimage-alpine:v0.8.1-3.22@sha256:308e9c2c52121a5f33cbbbb5ea52a1719b19ac40fd3c54238486c815e69b6275
+ARG BUILD_FROM=ghcr.io/chukysoria/baseimage-alpine:v0.8.2-3.22@sha256:73c5f12335adbe9127931176a85e6c745d32ac9367bca6638a9bbd48febb27e2
 ARG BUILD_EXT_RELEASE="1.34.1-alpine@sha256:778be3ed8f3e89e9326f25d80fb97889297db413c9ae9705f48e85a653d51842"
 FROM ghcr.io/dani-garcia/vaultwarden:${BUILD_EXT_RELEASE} AS source
 FROM ${BUILD_FROM} AS release
@@ -22,7 +22,7 @@ ENV ROCKET_PROFILE="release" \
 RUN mkdir /app/vw && \
     mkdir /app/vw/data && \
     apk --no-cache add \
-        openssl=3.3.3-r0
+        openssl=3.5.0-r0
 
 # Copies the files from the context (Rocket.toml file and web-vault)
 # and the binary from the "build" stage to the current stage
