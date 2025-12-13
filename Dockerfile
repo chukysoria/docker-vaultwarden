@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1@sha256:b6afd42430b15f2d2a4c5a02b919e98a525b785b1aaff16747d2f623364e39b6
 
-ARG BUILD_FROM=ghcr.io/chukysoria/baseimage-alpine:v0.8.15-3.22@sha256:3af92bd2458460cfd90f537a9ed6517e54ad6566fa57ba0955ca314c40e90317
+ARG BUILD_FROM=ghcr.io/chukysoria/baseimage-alpine:v1.0.0-3.23
 ARG BUILD_EXT_RELEASE="1.34.3-alpine@sha256:d70118b9dafb8588ee2651ceb5df68db27dcbd8e18467722010644ba48d5d6d6"
 FROM ghcr.io/dani-garcia/vaultwarden:${BUILD_EXT_RELEASE} AS source
 FROM ${BUILD_FROM} AS release
