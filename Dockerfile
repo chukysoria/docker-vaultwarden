@@ -22,7 +22,7 @@ ENV ROCKET_PROFILE="release" \
 RUN mkdir /app/vw && \
     mkdir /app/vw/data && \
     apk --no-cache add \
-        openssl=3.5.4-r0
+        openssl=3.5.5-r0
 
 # Copies the files from the context (Rocket.toml file and web-vault)
 # and the binary from the "build" stage to the current stage
