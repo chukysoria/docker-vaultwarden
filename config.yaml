@@ -1,6 +1,6 @@
 ---
 image: vaultwarden
-version: v0.5.54
+version: v0.5.55
 name: vaultwarden
 description: "[Vaultwarden](https://github.com/dani-garcia/vaultwarden) Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs."
 ext_release: "1.37.0-alpine@sha256:88b74551f5d79fd43f897c23bd74d5295a6e1fafb5d1ec23a1da92e7a0f06767"
