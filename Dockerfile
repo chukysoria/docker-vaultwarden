@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1@sha256:ecfaec9ed6d810b56388c508f4121597bfbba70d41a6dfeee4d8cad5f295fc32
+# syntax=docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
 
 ARG BUILD_FROM=ghcr.io/chukysoria/baseimage-alpine:v2.0.4-3.24@sha256:679068f5bd5acbfa9f435c9e50a7ab9bdeba829693be45e1fc0bfa88a3fe294a
 ARG BUILD_EXT_RELEASE="1.37.4-alpine@sha256:19ea2b669945d842dadc3d500f2d6a795866a003330f59a47b9634658bae98bb"
